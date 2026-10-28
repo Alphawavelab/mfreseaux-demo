@@ -1,0 +1,88 @@
+/* ===== Motion & interactivité ===== */
+body,.hero .wrap,.card,.result,.offer,.panel,.alt,.final,.trust li,.ph,details,.steps li,footer.site{transition:background-color .5s,color .5s}
+.lm-bg{fill:var(--navy)}.lm-b{fill:var(--blue)}.lm-r{fill:var(--red)}
+
+/* barre de progression de scroll */
+.progress-bar{position:fixed;top:0;left:0;height:4px;width:100%;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--blue),var(--red));z-index:200}
+header.site{transition:box-shadow .3s}
+header.site.scrolled{box-shadow:0 8px 30px -14px rgba(0,0,0,.25)}
+header.site.scrolled .wrap{height:64px}
+header.site .wrap{transition:height .3s}
+
+/* révélation au scroll */
+.js .rv{opacity:0;transform:translateY(36px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+
+/* titre hero : mots qui montent */
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+.hero h1 .w>span{display:inline-block;transform:translateY(110%);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*.07s + .15s)}
+@keyframes rise{to{transform:none}}
+.hero .badge,.hero p.lead,.hero .cta-row{animation:fade .9s ease both}
+.hero p.lead{animation-delay:.7s}.hero .cta-row{animation-delay:.9s}
+@keyframes fade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* scène de recharge */
+.scene{position:relative}
+.scene svg{margin-top:0}
+.scene .car-body{fill:var(--blue)}.scene .car-win{fill:var(--sky)}.scene .wheel{fill:var(--ink)}.scene .hub{fill:var(--sky)}
+.scene .wb{fill:#fff}.scene .wb-dot{fill:var(--navy)}.scene .st-b{fill:var(--blue)}.scene .st-r{fill:var(--red)}
+.scene .ground{stroke:var(--ink);stroke-width:3;stroke-linecap:round;opacity:.25}
+.scene .cable{fill:none;stroke:var(--ink);stroke-width:10;stroke-linecap:round}
+.scene .flow{fill:none;stroke:var(--red);stroke-width:5;stroke-linecap:round;stroke-dasharray:3 22;animation:flow 1.1s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-50}}
+.scene .bolt{fill:#fff;transform-box:fill-box;transform-origin:center;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.18)}}
+.scene .halo{fill:var(--red);opacity:.25;transform-box:fill-box;transform-origin:center;animation:halo 1.6s ease-out infinite}
+@keyframes halo{from{transform:scale(.6);opacity:.4}to{transform:scale(1.6);opacity:0}}
+.chip{position:absolute;background:#fff;border-radius:18px;padding:12px 16px;font-weight:700;font-size:.9rem;box-shadow:0 14px 30px -14px rgba(10,31,68,.35);animation:floaty 5s ease-in-out infinite}
+.chip small{display:block;font-weight:500;color:var(--muted);font-size:.74rem}
+.chip.c1{top:0;left:0}.chip.c2{bottom:6%;right:0;animation-delay:-2s}.chip.c3{top:34%;right:-2%;animation-delay:-3.4s}
+@keyframes floaty{50%{transform:translateY(-12px)}}
+.battery{display:flex;align-items:center;gap:10px}
+.bat{width:46px;height:22px;border:3px solid var(--ink);border-radius:7px;position:relative;padding:2px;flex:none}
+.bat::after{content:"";position:absolute;right:-8px;top:5px;width:4px;height:8px;background:var(--ink);border-radius:0 2px 2px 0}
+.bat i{display:block;height:100%;width:0;background:var(--accent-ink);border-radius:3px;transition:width .2s linear}
+
+/* bandeau défilant */
+.marquee{overflow:hidden;padding:20px 0;background:var(--ink);color:#fff;border-radius:var(--r-sm);margin:14px 16px 0}
+.marquee div{display:flex;gap:44px;width:max-content;animation:scroll 32s linear infinite;font-size:1.5rem;font-weight:700;letter-spacing:-.02em}
+.marquee span::after{content:"⚡";margin-left:44px;color:var(--red)}
+.marquee:hover div{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* cartes : tilt + boutons magnétiques */
+.offer,.steps li,.trust li{transition:transform .25s ease,box-shadow .25s,background-color .5s}
+.offer:hover,.steps li:hover,.trust li:hover{box-shadow:0 24px 50px -24px rgba(10,31,68,.4)}
+.tilt{will-change:transform}
+.btn{will-change:transform}
+.steps li{position:relative;overflow:hidden}
+.steps li::after{content:"";position:absolute;left:0;bottom:0;height:5px;width:0;background:var(--blue);transition:width .7s .3s}
+.steps li.in::after{width:100%}
+
+/* configurateur */
+.step.on{animation:slide .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes slide{from{opacity:0;transform:translateX(26px)}to{opacity:1;transform:none}}
+.result .est{font-variant-numeric:tabular-nums}
+
+/* calculateur d'économies */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.calc .box{border-radius:var(--r);padding:40px}
+.calc .ctrl{background:var(--cream)}
+.calc output{display:block;font-size:clamp(2.6rem,5vw,4rem);font-weight:700;letter-spacing:-.05em;line-height:1;margin:8px 0 22px;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;height:10px;border-radius:10px;appearance:none;-webkit-appearance:none;background:linear-gradient(90deg,var(--blue) var(--p,40%),#d9d4c8 var(--p,40%));outline-offset:6px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;background:#fff;border:6px solid var(--ink);cursor:grab}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:6px solid var(--ink);cursor:grab}
+.bars{display:grid;gap:18px;margin:22px 0}
+.bar b{display:flex;justify-content:space-between;font-size:.95rem;margin-bottom:6px}
+.bar div{height:22px;border-radius:12px;background:rgba(255,255,255,.14);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:12px;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.bar.home i{background:var(--red)}.bar.pub i{background:#fff;opacity:.8}
+.calc .save{background:var(--navy);color:#fff}
+.calc .save .big{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:700;letter-spacing:-.05em;color:var(--glow);line-height:1;font-variant-numeric:tabular-nums}
+.calc small{color:var(--on-dark-2);font-size:.78rem;display:block;margin-top:14px}
+.calc .ctrl small{color:var(--muted)}
+
+
+
+@media(max-width:980px){.calc{grid-template-columns:1fr}.chip.c3{display:none}}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}.hero h1 .w>span{transform:none;animation:none}.marquee div,.chip,.scene .flow,.scene .bolt,.scene .halo,.step.on{animation:none}}

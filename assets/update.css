@@ -1,0 +1,68 @@
+/* Certifications Qualifelec + offres 4 colonnes */
+.certs{padding:24px 0 0}
+.certs-box{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;background:var(--cream);border-radius:var(--r);padding:48px 56px}
+.cert-logo{width:150px;height:auto;background:#fff;border-radius:var(--r-sm);padding:20px}
+.certs h2{font-size:clamp(1.7rem,3.4vw,2.6rem);margin-bottom:14px}
+.certs p{color:var(--muted)}
+.levels{list-style:none;display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 16px}
+.levels li{background:var(--ink);color:#fff;border-radius:18px;padding:14px 22px;display:grid}
+.levels b{font-size:1.25rem;letter-spacing:-.02em}
+.levels span{font-size:.78rem;color:var(--glow)}
+.cert-note{font-size:.85rem}
+.cert-note a{color:var(--blue)}
+.offers.four{grid-template-columns:repeat(4,1fr)}
+.offers.four .kw{font-size:3.2rem}
+.offers.four .offer{padding:32px 26px}
+@media(max-width:1180px){.offers.four{grid-template-columns:1fr 1fr}}
+@media(max-width:980px){.certs-box{grid-template-columns:1fr;padding:32px 24px;gap:24px}.cert-logo{width:120px}}
+@media(max-width:560px){.offers.four{grid-template-columns:1fr}}
+
+/* Carrousel de logos de marques */
+.brands{padding:36px 0 8px;overflow:hidden}
+.brands-title{text-align:center;font-weight:600;color:var(--muted);font-size:.95rem;margin-bottom:22px;padding:0 16px}
+.brands-track{display:flex;width:max-content;animation:brandscroll 38s linear infinite;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.brands-track ul{display:flex;align-items:center;gap:72px;list-style:none;padding-right:72px}
+.brands-track li{flex:none;display:flex;align-items:center;height:48px}
+.brands-track img{height:36px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(1) contrast(.9);opacity:.7;transition:filter .3s,opacity .3s}
+.brands-track li:hover img{filter:none;opacity:1}
+.brands:hover .brands-track{animation-play-state:paused}
+@keyframes brandscroll{to{transform:translateX(-33.3333%)}}
+@media(prefers-reduced-motion:reduce){.brands-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.brands-track ul[aria-hidden]{display:none}}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.service{background:var(--cream);border-radius:var(--r);padding:36px;display:flex;flex-direction:column;gap:12px;transition:transform .25s,background-color .5s}
+.service:nth-child(2){background:var(--sky)}.service:nth-child(3){background:var(--blush)}
+.service:hover{transform:translateY(-6px)}
+.svc-ico{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:var(--ink);color:#fff;margin-bottom:10px}
+.svc-ico svg{width:28px;height:28px}
+.service p{color:var(--muted);flex:1}
+.service a{font-weight:700;text-decoration:none}
+.service a:hover{text-decoration:underline}
+@media(max-width:980px){.services{grid-template-columns:1fr}}
+
+/* Carte */
+.mapbox{display:grid;grid-template-columns:.8fr 1.2fr;gap:14px}
+.map-card{background:var(--navy);color:#fff;border-radius:var(--r);padding:40px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+.map-card h3{font-size:2rem}
+.map-card address{font-style:normal;color:var(--on-dark);font-size:1.15rem;line-height:1.6}
+.map-card .tel{color:#fff;font-size:1.5rem}
+.map-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.map-card .btn-line{border-color:#fff;color:#fff}
+.map-card .btn-line:hover{background:#fff;color:var(--ink)}
+.map-card .btn-dark{background:#fff;color:var(--ink)}
+.map-card .btn-dark .arr{background:var(--ink);color:#fff}
+.map-frame{position:relative;border-radius:var(--r);overflow:hidden;min-height:420px;background:var(--sky)}
+.map-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map-link{position:absolute;right:14px;bottom:14px;background:#fff;color:var(--ink);font-size:.85rem;font-weight:600;padding:8px 14px;border-radius:999px;text-decoration:none;box-shadow:0 8px 20px -8px rgba(0,0,0,.4)}
+@media(max-width:980px){.mapbox{grid-template-columns:1fr}.map-frame{min-height:340px}.map-card{padding:28px}}
+.map-card .map-hours{color:var(--on-dark);font-size:1.05rem;line-height:1.5}
+.name-note{margin:16px 0 4px;padding:16px 20px;border-radius:var(--r-sm);background:var(--sky);color:var(--ink);font-size:1.05rem}
+.name-note b{color:var(--blue)}
+footer .cols p b{color:#fff;font-size:1.05rem}
+.hero .slogan{margin:-6px 0 14px;font-weight:800;font-size:1.15rem;letter-spacing:-.01em;color:var(--accent-ink);animation:fade .9s ease both;animation-delay:.1s}
+.hero .slogan::before{content:"⚡";margin-right:8px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-err{margin:0;padding:12px 16px;border-radius:12px;background:#ffe2de;color:#8a1a10;font-weight:600;font-size:.92rem}
+
+.demo-ribbon{background:#0a1226;color:#fff;text-align:center;font:600 .82rem/1 'Inter Tight',sans-serif;padding:8px 12px;letter-spacing:.02em}

@@ -1,0 +1,32 @@
+/* Keep approved scene geometry intact and labels clear of technical details. */
+.hero-approved .hero-photo{aspect-ratio:4/3;object-fit:contain}
+.hero-approved .hero-scene-tags{
+ display:grid;
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:8px;
+ margin-top:12px;
+}
+.hero-approved .hero-scene-tags .chip{
+ display:block;
+ position:static;
+ min-width:0;
+ padding:12px 10px;
+ border-radius:16px;
+ font-size:.78rem;
+ line-height:1.3;
+ box-shadow:none;
+ animation:none;
+ transform:none;
+}
+.hero-approved .hero-scene-tags .chip small{
+ margin-top:4px;
+ font-size:.66rem;
+ line-height:1.35;
+}
+.hero-approved .visual-note{margin:10px 4px 0}
+.charger-gallery .installation-photo img{object-fit:contain}
+@media(max-width:400px){
+ .hero-approved .hero-scene-tags{gap:6px}
+ .hero-approved .hero-scene-tags .chip{padding:10px 8px;font-size:.72rem}
+ .hero-approved .hero-scene-tags .chip small{font-size:.62rem}
+}

@@ -1,0 +1,32 @@
+/* MFRéseaux — original brand assets and illustrative generated photography. */
+.logo{flex-shrink:0}
+.logo .brand-logo{width:190px;height:auto;flex:none}
+.hero-art.hero-visual{width:100%;max-width:480px;margin-inline:auto}
+.hero-visual picture{display:block;overflow:hidden;border-radius:var(--r);background:var(--cream)}
+.hero-visual .hero-photo{width:100%;height:auto;aspect-ratio:1;object-fit:contain;display:block}
+.hero-visual .visual-note{font-size:.68rem;line-height:1.4;color:var(--muted);margin:10px 12px 0}
+.hero-visual .chip.c1{top:18px;left:16px}
+.hero-visual .chip.c2{bottom:54px;right:16px}
+.hero-visual .chip.c3{top:auto;bottom:132px;right:16px}
+.installation-photo{min-width:0;margin:0;overflow:hidden;background:var(--cream);border-radius:var(--r)}
+.installation-photo:nth-child(1){background:var(--sky)}
+.installation-photo:nth-child(3){background:var(--blush)}
+.installation-photo picture{display:block;overflow:hidden;aspect-ratio:4/3}
+.installation-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.installation-photo figcaption{padding:22px 26px 26px}
+.installation-photo figcaption span{display:block;color:var(--muted);font-size:.8rem;margin-bottom:7px}
+.installation-photo figcaption strong{display:block;font-weight:600;font-size:1.15rem;line-height:1.25;letter-spacing:-.02em}
+.installation-photo .photo-credit{display:block;color:var(--muted);font-size:.72rem;line-height:1.5;margin-top:12px}
+footer .logo .brand-logo{width:210px;max-width:100%}
+@media(max-width:980px){
+ .hero-art.hero-visual{max-width:560px}
+ .hero-visual .hero-photo{aspect-ratio:1;object-fit:contain}
+ .hero-visual .chip.c1{top:14px;left:14px}
+ .hero-visual .chip.c2{bottom:48px;right:14px}
+}
+@media(max-width:560px){
+ .logo .brand-logo{width:174px}
+ .hero-visual .hero-photo{aspect-ratio:1}
+ .hero-visual .chip{padding:9px 12px;font-size:.8rem;border-radius:14px}
+ .installation-photo figcaption{padding:20px 22px 24px}
+}

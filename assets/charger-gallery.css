@@ -1,0 +1,87 @@
+/* Product imagery and manufacturer credits, scoped to the multibrand gallery. */
+.charger-gallery .sec-head{max-width:850px}
+.charger-gallery .sec-head .eyebrow{color:var(--white)}
+.charger-gallery #h-real{scroll-margin-top:180px}
+.charger-gallery__grid{
+ display:flex;
+ flex-wrap:wrap;
+ justify-content:center;
+ align-items:stretch;
+ gap:20px;
+}
+.charger-gallery .installation-photo{
+ display:flex;
+ flex-direction:column;
+ flex:0 1 calc((100% - 40px) / 3);
+ min-width:0;
+ margin:0;
+ overflow:hidden;
+ border-radius:var(--r);
+ background:var(--cream);
+}
+.charger-gallery .installation-photo picture{
+ display:block;
+ flex:none;
+ width:100%;
+ aspect-ratio:4/3;
+ overflow:hidden;
+ background:var(--sky);
+}
+.charger-gallery .installation-photo img{
+ display:block;
+ width:100%;
+ height:100%;
+ object-fit:cover;
+}
+.charger-gallery .installation-photo figcaption{
+ display:flex;
+ flex:1;
+ flex-direction:column;
+ padding:22px 26px 26px;
+}
+.charger-gallery .installation-photo figcaption>span{
+ display:block;
+ margin:0 0 7px;
+ color:var(--muted);
+ font-size:.8rem;
+ line-height:1.45;
+}
+.charger-gallery .installation-photo figcaption>strong{
+ display:block;
+ color:var(--ink);
+ font-size:1.15rem;
+ font-weight:600;
+ line-height:1.25;
+ letter-spacing:-.02em;
+}
+.charger-gallery .installation-photo .photo-credit{
+ display:block;
+ margin-top:auto;
+ padding-top:14px;
+ color:var(--muted);
+ font-size:.75rem;
+ line-height:1.5;
+}
+.charger-gallery .photo-credit a{
+ color:var(--navy);
+ text-decoration-thickness:1px;
+ text-underline-offset:3px;
+}
+.charger-gallery .photo-credit a:hover{color:var(--accent-ink)}
+.charger-gallery__note{
+ max-width:900px;
+ margin:28px auto 0;
+ color:var(--muted);
+ font-size:.85rem;
+ line-height:1.6;
+ text-align:center;
+}
+@media(max-width:980px){
+ .charger-gallery .installation-photo{flex-basis:calc((100% - 20px) / 2)}
+}
+@media(max-width:560px){
+ .charger-gallery__grid{gap:18px}
+ .charger-gallery .installation-photo{flex-basis:100%}
+ .charger-gallery .installation-photo figcaption{padding:20px 22px 24px}
+ .charger-gallery__note{margin-top:24px;text-align:left}
+}
